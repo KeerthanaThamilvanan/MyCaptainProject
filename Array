@@ -1,0 +1,71 @@
+#include<stdio.h>
+void main()
+{
+    int a[3][3],b[3][3],c[3][3];
+    int i,j,val=0,k=0,count=0;
+    printf("Enter element of the first matrix : \n");
+    i=0;
+    while(i<3)
+    {
+        j=0;
+        while(j<3)
+        {
+            printf("Enter Number : ");
+            scanf("%d",&a[i][j]);
+            j++;
+        }
+        i++;
+    }
+    printf("\n\n");
+    printf("Enter element of the second matrix : \n");
+    i=0;
+    while(i<3)
+    {
+        j=0;
+        while(j<3)
+        {
+            printf("Enter Number : ");
+            scanf("%d",&b[i][j]);
+            j++;
+        }
+        i++;
+    }
+    i=0;
+    while(i<3)
+    {
+        j=0;
+        count++;
+        val=0;
+        while(j<3)
+        {
+            val=val+a[k][j]*b[j][i];
+            j++;
+        }
+        c[k][i++]=val;
+        if(count==3)
+        {
+            i=0;
+            count=0;
+            k++;
+            if(k==3)
+            {
+                break;
+            }
+        }
+    }
+    printf("\n\n");
+    printf("Result of Multiplication is : \n\n");
+    i=0;
+    while(i<3)
+    {
+        j=0;
+        while(j<3)
+        {
+            printf("%d  ",c[i][j]);
+            j++;
+        }
+        printf("\n");
+        i++;
+    }
+    getch();
+}
